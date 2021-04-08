@@ -19,8 +19,7 @@ function deleteDigit(n) {
       break;
     }
   }
-  // eslint-disable-next-line eqeqeq
-  return Number(newN.filter((k) => k != undefined).join(''));
+  return Number(newN.filter((k) => k !== undefined).join(''));
 }
 
 module.exports = deleteDigit;
