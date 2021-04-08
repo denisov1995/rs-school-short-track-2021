@@ -18,14 +18,20 @@
  */
 
 function removeKFromList(l, k) {
-  // eslint-disable-next-line no-param-reassign
-  l.join('');
-  for (let i = 0; i < l.length; i++) {
-    // eslint-disable-next-line no-param-reassign
-    l = l.replace(k, '');
+  let neww = [];
+  let tmp = l;
+  while (tmp) {
+    neww.push(tmp.value);
+    tmp = tmp.next;
   }
-  l.split('').map((el) => Number(el));
-  return l;
+  neww = neww.filter((n) => n !== k);
+  let z = { next: null };
+  for (let i = neww.length; i; --i) {
+    z.value = neww.pop();
+    z = { next: z };
+  }
+  z = z.next;
+  return z;
 }
 
 module.exports = removeKFromList;
