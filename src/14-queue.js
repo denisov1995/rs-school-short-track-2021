@@ -20,8 +20,7 @@ class Queue {
     return this.array.length;
   }
 
-  enqueue(array) {
-    const arr = new ListNode(array);
+  enqueue() {
   }
 
   dequeue() {
