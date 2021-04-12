@@ -18,8 +18,7 @@ function sortByHeight(arr) {
       a.splice(j, 0, arr2[j]);
     }
   }
-  // eslint-disable-next-line eqeqeq
-  const result = a.filter((n) => n != undefined);
+  const result = a.filter((n) => n !== undefined);
   return result;
 }
 
