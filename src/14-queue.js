@@ -14,17 +14,17 @@ const ListNode = require('../extensions/list-node');
 class Queue {
   constructor() {
     this.queue = new ListNode();
-    this.now = this.queue;
+    this.fresh = this.queue;
   }
 
   get size() {
-    return this.now.length;
+    throw new Error('Not implemented');
   }
 
   enqueue(element) {
-    this.now.value = element;
-    this.now.next = new ListNode();
-    this.now = this.now.next;
+    this.fresh.value = element;
+    this.fresh.next = new ListNode();
+    this.fresh = this.fresh.next;
   }
 
   dequeue() {
